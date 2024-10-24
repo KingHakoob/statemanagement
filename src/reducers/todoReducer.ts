@@ -11,7 +11,7 @@ interface Action {
 
 const todoReducer = (state: Todo[], action: Action): Todo[] => {
     if(action.type === 'ADD') return [ action.todo!, ...state ];
-    else return state.filter((todo) => todo.id !== action.id);
+    return state.filter((todo) => todo.id !== action.id);
 }
 
 export default todoReducer;
